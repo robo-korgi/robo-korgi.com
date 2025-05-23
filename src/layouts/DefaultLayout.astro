@@ -1,0 +1,67 @@
+---
+// src/layouts/DefaultLayout.astro
+import "../styles/global.css"
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>robo-korgi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Russo+One&display=swap" rel="stylesheet" />
+  </head>
+  <body class="m-0 p-0 font-sans">
+    <div class="min-h-screen bg-gradient-to-b from-[#14a5ca] to-[#b0e7f5] flex flex-col lg:flex-row items-stretch">
+      
+      <!-- Hero Column -->
+      <div class="flex items-center justify-center p-10 w-full lg:w-5/10 xl:w-7/10 2xl:w-3/5">
+        <!-- prettier-ignore -->
+        <h1 class="text-[min(18vw,13rem)] font-black leading-[1.05] text-black font-russo text-center w-full flex flex-wrap justify-center">
+          <span class="flex whitespace-nowrap">
+            <span>r</span>
+            <span class="ml-[-0.1vw]">o</span>
+            <span class="ml-[-0.5vw]">b</span>
+            <span class="ml-[-0.3vw]">o</span>
+            <span class="ml-[-0.2vw]">-</span>
+          </span>
+          <span class="flex whitespace-nowrap">
+            <span>k</span>
+            <span class="ml-[-0.5vw]">o</span>
+            <span class="ml-[-0.5vw]">r</span>
+            <span class="ml-[-0.2vw]">g</span>
+            <span class="ml-[-0.2vw]">i</span>
+          </span>
+        </h1>
+      </div>
+
+      <!-- White Content Box -->
+      <div class="w-full lg:w-5/10 xl:w-3/10 2xl:w-2/5 flex justify-center">
+        <div class="bg-white relative flex flex-col justify-between mt-6 mr-6 mb-10 ml-6 xl:mt-10 xl:mr-10 xl:mb-14 pt-4 md:pt-10 pb-6 md:pb-20 min-h-[35vh] max-w-[800px] mx-auto">
+          
+          <!-- Background logo layer -->
+          <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+            <div class="flex justify-center items-start h-full">
+              <img src="/img/logo-dog.svg" alt="logo" class="max-w-none w-[500px] sm:w-[600px] md:w-[700px] lg:w-[800px] opacity-5 translate-y-[40%] md:translate-y-[45%] lg:translate-y-[50%]" />
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="relative z-10 w-full px-4 md:px-5">
+            <!-- Nav -->
+            <slot name="nav" />
+
+            <!-- Page content -->
+            <main class="py-4">
+              <slot />
+            </main>
+          </div>
+
+          <!-- Graffiti footer -->
+          <div class="w-full relative z-10 px-4 mt-6 mb-4">
+            <img src="/img/logotype-graf-korgi-prajna-cyan.svg" alt="robo-korgi graffiti logo" class="w-full max-h-[60px] object-contain object-bottom mx-auto" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
