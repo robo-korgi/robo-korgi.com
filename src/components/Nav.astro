@@ -1,0 +1,33 @@
+---
+// src/components/Nav.astro
+---
+
+<div>
+  <!-- Three Tier Nav  -->
+  <header class="hidden lg:flex 2xl:hidden flex-col text-[0.65rem] leading-none tracking-tight border border-black mb-10 font-sans uppercase">
+    <div class="flex border-b border-black">
+      <a href="https://github.com/robo-korgi" class="w-1/2 text-center px-4 py-2 border-r border-black">GitHub</a>
+      <a href="https://soundcloud.com/robo-korgi" class="w-1/2 text-center px-4 py-2">Soundcloud</a>
+    </div>
+    <div class="text-center text-[1.0625rem] font-bold py-3 border-b border-black">ROBO-KORGI</div>
+    <div class="flex">
+      <a href="https://www.twitch.tv/robokorgi" class="w-1/2 text-center px-4 py-2 border-r border-black">Twitch</a>
+      <a href="https://www.youtube.com/@robo-korgi" class="w-1/2 text-center px-4 py-2">YouTube</a>
+    </div>
+  </header>
+
+  <!-- One Tier Nav  -->
+  <header class="flex lg:hidden 2xl:flex flex-col sm:flex-row sm:items-center justify-between text-[0.65rem] leading-none tracking-tight border border-black mb-10 font-sans uppercase">
+    <div class="flex justify-center sm:justify-start border-b sm:border-b-0 sm:border-r border-black w-full sm:w-auto">
+      <a href="https://github.com/robo-korgi" class="px-4 py-2 sm:px-5 sm:py-2 border-r border-black">GitHub</a>
+      <a href="https://soundcloud.com/robo-korgi" class="px-4 py-2 sm:px-5 sm:py-2">Soundcloud</a>
+    </div>
+    <div class="text-center text-[0.95rem] font-bold p-3 sm:py-0 flex-grow border-t sm:border-t-0 sm:border-none">
+      ROBO-KORGI
+    </div>
+    <div class="flex justify-center sm:justify-end border-t sm:border-t-0 sm:border-l border-black w-full sm:w-auto">
+      <a href="https://www.twitch.tv/robokorgi" class="px-4 py-2 sm:px-5 sm:py-2 border-r border-black">Twitch</a>
+      <a href="https://www.youtube.com/@robo-korgi" class="px-4 py-2 sm:px-5 sm:py-2">YouTube</a>
+    </div>
+  </header>
+</div>
