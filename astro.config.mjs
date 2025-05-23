@@ -4,6 +4,6 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   base: '/robo-korgi.com/',
-  site: 'https://robo-korgi.github.io/robo-korgi.com/',
+  site: 'https://robo-korgi.com/',
   integrations: [tailwind(), sitemap()],
 });
