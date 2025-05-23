@@ -1,6 +1,7 @@
 ---
 // src/layouts/DefaultLayout.astro
 import "../styles/global.css"
+import HeroColumn from "../components/HeroColumn.astro"
 ---
 
 <html lang="en">
@@ -13,27 +14,8 @@ import "../styles/global.css"
   <body class="m-0 p-0 font-sans">
     <div class="min-h-screen bg-gradient-to-b from-[#14a5ca] to-[#b0e7f5] flex flex-col lg:flex-row items-stretch">
       
-      <!-- Hero Column -->
-      <div class="flex items-center justify-center p-10 w-full lg:w-5/10 xl:w-7/10 2xl:w-3/5">
-        
-        <!-- prettier-ignore -->
-        <h1 class="text-[min(18vw,13rem)] font-black leading-[1.05] text-black font-russo text-center w-full flex flex-wrap justify-center">
-          <span class="flex whitespace-nowrap">
-            <span>r</span>
-            <span class="ml-[-0.1vw]">o</span>
-            <span class="ml-[-0.5vw]">b</span>
-            <span class="ml-[-0.3vw]">o</span>
-            <span class="ml-[-0.2vw]">-</span>
-          </span>
-          <span class="flex whitespace-nowrap">
-            <span>k</span>
-            <span class="ml-[-0.5vw]">o</span>
-            <span class="ml-[-0.5vw]">r</span>
-            <span class="ml-[-0.2vw]">g</span>
-            <span class="ml-[-0.2vw]">i</span>
-          </span>
-        </h1>
-      </div>
+      <!-- Hero Column -->        
+      <HeroColumn />
 
       <!-- White Content Box -->
       <div class="w-full lg:w-5/10 xl:w-3/10 2xl:w-2/5 flex justify-center">
