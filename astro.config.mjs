@@ -3,6 +3,7 @@ import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  base: '/robo-korgi.com/', // Required for GitHub Pages
+  base: '/robo-korgi.com/',
+  site: 'https://robo-korgi.github.io/robo-korgi.com/',
   integrations: [tailwind(), sitemap()],
 });
