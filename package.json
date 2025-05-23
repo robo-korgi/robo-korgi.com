@@ -1,0 +1,17 @@
+{
+  "name": "robo-korgi",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "^5.8.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.3",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.4.38"
+  }
+}
