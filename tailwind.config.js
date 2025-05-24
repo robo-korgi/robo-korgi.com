@@ -22,6 +22,13 @@ export default {
               fontSize: '1rem',
               lineHeight: '1.4',
             },
+            ul: {
+              listStyleType: 'disc',
+              listStylePosition: 'outside',
+              paddingLeft: '1.5rem',
+              fontSize: '1rem',
+              lineHeight: '1.4',
+            },
             li: {
               display: 'list-item', 
               fontSize: '1rem',
