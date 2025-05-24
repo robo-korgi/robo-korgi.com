@@ -1,9 +1,11 @@
 ---
 // src/layouts/DefaultLayout.astro
 import "../styles/global.css"
-import BackgroundLogo from "../components/BackgroundLogo.astro"
+import BackgroundLogo from "../components/logos/BackgroundLogo.astro"
+import HeaderNav from "../components/navs/HeaderNav.astro"
 import HeroColumn from "../components/HeroColumn.astro"
-import Nav from "../components/Nav.astro"
+import GrafFooterLogotype from "../components/logos/GrafFooterLogotype.astro"
+import SocialNav from "../components/navs/SocialNav.astro"
 ---
 
 <html lang="en">
@@ -15,24 +17,20 @@ import Nav from "../components/Nav.astro"
   </head>
   <body class="m-0 p-0 font-sans">
     <div class="min-h-screen bg-gradient-to-b from-[#14a5ca] to-[#b0e7f5] flex flex-col lg:flex-row items-stretch">
-      
-      <!-- Hero Column --> 
+
       <HeroColumn />
 
       <!-- White Content Box -->
       <div class="w-full lg:w-5/10 xl:w-3/10 2xl:w-2/5 flex justify-center">
         <div class="bg-white relative flex flex-col justify-between mt-6 mr-6 mb-10 ml-6 xl:mt-10 xl:mr-10 xl:mb-14 pt-4 md:pt-10 pb-6 md:pb-20 min-h-[35vh] max-w-[800px] mx-auto">
-          
-          <!-- Background logo layer -->
+
           <BackgroundLogo />
 
-          <!-- Nav/Content Wrapper -->
+          <!-- Content -->
           <div class="relative z-10 w-full px-4 md:px-5">
-            
-            <!-- Nav -->
-            <Nav />
 
-            <!-- Content -->
+            <HeaderNav />
+
             <main class="py-4">
               <div class="max-w-prose mx-auto md:mx-0 px-4 md:px-0">
                 <slot />
@@ -40,10 +38,12 @@ import Nav from "../components/Nav.astro"
             </main>
           </div>
 
-          <!-- Graffiti footer -->
+          <!-- Footer -->
           <div class="w-full relative z-10 px-4 mt-6 mb-4">
-            <img src="/img/logotype-graf-korgi-prajna-cyan.svg" alt="robo-korgi graffiti logo" class="w-full max-h-[60px] object-contain object-bottom mx-auto" />
+            <SocialNav />
+            <GrafFooterLogotype />
           </div>
+
         </div>
       </div>
     </div>

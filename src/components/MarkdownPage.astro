@@ -1,0 +1,30 @@
+---
+import DefaultLayout from "../layouts/DefaultLayout.astro"
+import { getCollection } from "astro:content"
+
+const { slug } = Astro.props
+
+const page = (await getCollection("pages")).find((p) => p.slug === slug)
+const pageContent = await page?.render()
+---
+
+<DefaultLayout>
+  <div class="max-w-prose mx-auto md:mx-0 px-4 md:px-0">
+    <div class="text-left text-2xl md:text-3xl font-semibold leading-[1.1] tracking-tight text-[#0d0d0d] font-russo">
+      {page?.data.title}
+    </div>
+
+    <p class="mt-2 font-sans text-base md:text-lg font-normal leading-relaxed tracking-normal text-[#222]">
+      {page?.data.subtitle}
+      {page?.data.subtitle2 ? <><br />{page.data.subtitle2}</> : null}
+    </p>
+
+    <div class="prose mt-6">
+      {page?.rendered?.html ? (
+        <Fragment set:html={page.rendered.html} />
+      ) : (
+        <p>Loading content failed.</p>
+      )}
+    </div>
+  </div>
+</DefaultLayout>

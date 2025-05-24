@@ -1,0 +1,59 @@
+---
+// src/components/HeaderNav.astro
+
+const brand = {
+  name: "ROBO-KORGI",
+  url: "/",
+};
+
+const headerNav = {
+  github: {
+    name: "About",
+    url: "/about",
+  },
+  soundcloud: {
+    name: "Blog",
+    url: "https://soundcloud.com/robo-korgi",
+  },
+  twitch: {
+    name: "Music",
+    url: "/music",
+  },
+  youtube: {
+    name: "BTB",
+    url: "/behind-the-bastards",
+  },
+};
+---
+
+<div>
+  <!-- Three Tier Nav -->
+  <header class="hidden lg:flex 2xl:hidden flex-col text-[0.65rem] leading-none tracking-tight border border-black mb-10 font-sans uppercase">
+    <div class="flex border-b border-black">
+      <a href={headerNav.github.url} class="w-1/2 text-center px-4 py-2 border-r border-black">{headerNav.github.name}</a>
+      <a href={headerNav.soundcloud.url} class="w-1/2 text-center px-4 py-2">{headerNav.soundcloud.name}</a>
+    </div>
+    <a href={brand.url} class="text-center text-[1.0625rem] font-bold py-3 border-b border-black block">
+      {brand.name}
+    </a>
+    <div class="flex">
+      <a href={headerNav.twitch.url} class="w-1/2 text-center px-4 py-2 border-r border-black">{headerNav.twitch.name}</a>
+      <a href={headerNav.youtube.url} class="w-1/2 text-center px-4 py-2">{headerNav.youtube.name}</a>
+    </div>
+  </header>
+
+  <!-- One Tier Nav -->
+  <header class="flex lg:hidden 2xl:flex flex-col sm:flex-row sm:items-center justify-between text-[0.65rem] leading-none tracking-tight border border-black mb-10 font-sans uppercase">
+    <div class="flex justify-center sm:justify-start border-b sm:border-b-0 sm:border-r border-blheaderNavack w-full sm:w-auto">
+      <a href={headerNav.github.url} class="px-4 py-2 sm:px-5 sm:py-2 border-r border-black">{headerNav.github.name}</a>
+      <a href={headerNav.soundcloud.url} class="px-4 py-2 sm:px-5 sm:py-2 border-r border-black">{headerNav.soundcloud.name}</a>
+    </div>
+    <a href={brand.url} class="text-center text-[0.95rem] font-bold p-3 sm:py-0 flex-grow border-t sm:border-t-0 sm:border-none">
+      {brand.name}
+    </a>
+    <div class="flex justify-center sm:justify-end border-t sm:border-t-0 sm:border-l border-black w-full sm:w-auto">
+      <a href={headerNav.twitch.url} class="px-4 py-2 sm:px-5 sm:py-2 border-r border-black">{headerNav.twitch.name}</a>
+      <a href={headerNav.youtube.url} class="px-4 py-2 sm:px-5 sm:py-2">{headerNav.youtube.name}</a>
+    </div>
+  </header>
+</div>

@@ -2,7 +2,6 @@
 title: robo-korgi©
 subtitle: creating kinda ok digital content
 subtitle2: hopefully making the world a little less worse.
-type: content
 ---
 
 ## CODER, STREAMER, AUTIST, DREAMER
