@@ -1,9 +1,9 @@
 ---
 import DefaultLayout from "../layouts/DefaultLayout.astro"
-import { getEntryBySlug } from "astro:content"
+import { getEntryBySlug, render } from "astro:content"
 
 const page = await getEntryBySlug("pages", "index")
-const pageContent = await page?.render()
+const pageContent = await render(page)
 ---
 
 <DefaultLayout>
@@ -17,8 +17,10 @@ const pageContent = await page?.render()
       {page?.data.subtitle2 ? <><br />{page.data.subtitle2}</> : null}
     </p>
 
-    <div class="prose prose-sm sm:prose lg:prose-lg max-w-none mt-6">
-      <pageContent />
+    <div class="prose mt-6">
+      {page?.rendered?.html ? (
+        <Fragment set:html={page.rendered.html} />
+      ) : (<p>Loading content failed.</p>)}
     </div>
   </div>
 </DefaultLayout>
